@@ -20,6 +20,7 @@ h1, h2, p {
 }
 h1 {
     font-weight: 900 !important;
+    text-align: center;
 }
 h2 {
     font-weight: 700 !important;
@@ -75,8 +76,79 @@ option {
     color: yellow;
 }
 
+.submit-section {
+    display: flex;
+}
+
+button.submit {
+    margin: 0px auto;
+    width: 50%;
+    padding: 0.5em 0.5em;
+    font-size: 14pt;
+    border: 0px;
+    border-radius: 1em;
+    background-color: lightblue;
+    font-weight: 700;
+    transition: .3s;
+}
+
+button.submit:hover {
+    background-color: #27b5e3;
+    transition: .3s;
+}
+
+.results-table {
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 50%;
+}
+
+.results-table thead {
+    background-color: lightgray;
+}
+
+.results-table th, .results-table td {
+    padding: .5em .5em;
+}
+
+.results-table tr:nth-child(2n) {
+    background-color: whitesmoke;
+}
+
+.definitions {
+    width: 100%;
+}
+
+.single-definition h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.single-definition p {
+    margin-bottom: 0px;
+}
+
+.single-definition {
+    padding: .5em .5em;
+}
+
+.single-definition {
+    margin-bottom: 1em;
+    background-color: whitesmoke;
+    border-radius: 1em;
+}
+
 @media screen and (max-width: 700px) {
     .question h2 {
         padding: .5em .25em;
+    }
+
+    .results-table {
+        width: 100%;
+    }
+
+    button.submit {
+        width: 100%;
     }
 }
