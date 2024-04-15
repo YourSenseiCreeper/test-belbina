@@ -1,3 +1,14 @@
+h1, h2, p, option {
+    font-family: "Roboto", sans-serif;
+}
+h1 {
+    font-weight: 900 !important;
+    text-align: center;
+}
+h2 {
+    font-weight: 700 !important;
+}
+
 .introduction {
     margin-top: 2em;
 }
@@ -11,19 +22,18 @@ datalist {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* writing-mode: vertical-lr; */
   width: 100%;
 }
 
-h1, h2, p {
-    font-family: "Roboto", sans-serif;
+#questions {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 1em;
 }
-h1 {
-    font-weight: 900 !important;
-    text-align: center;
-}
-h2 {
-    font-weight: 700 !important;
+
+.question {
+    width: 100%;
 }
 
 .question h2 {
@@ -33,10 +43,13 @@ h2 {
   background-color: rgb(230, 230, 230);
   text-align: center;
   padding: 1em 0.5em;
+  margin-bottom: 0px;
+  border-bottom: 3px solid lightblue;
 }
 
 .answer-block {
     width: 100%;
+    margin-top: 1em;
 }
 .answer-block p {
     font-weight: 400 !important;
@@ -51,12 +64,9 @@ h2 {
     margin-bottom: 1em;
 }
 
-.question {
-    width: 100%;
-}
-
 option {
   padding: 0;
+  margin-left: 3px;
 }
 
 .slider {
@@ -78,6 +88,7 @@ option {
 
 .submit-section {
     display: flex;
+    flex-direction: column;
 }
 
 button.submit {
@@ -97,6 +108,14 @@ button.submit:hover {
     transition: .3s;
 }
 
+button.submit:disabled {
+    background-color: whitesmoke;
+}
+
+.explenation {
+    text-align: center;
+}
+
 .results-table {
     margin: 0 auto;
     margin-top: 1em;
@@ -105,7 +124,7 @@ button.submit:hover {
 }
 
 .results-table thead {
-    background-color: lightgray;
+    background-color: lightblue;
 }
 
 .results-table th, .results-table td {
@@ -120,6 +139,11 @@ button.submit:hover {
     width: 100%;
 }
 
+.definitions-header {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
 .single-definition h2 {
     font-size: 1.5rem;
     text-align: center;
@@ -127,6 +151,7 @@ button.submit:hover {
 
 .single-definition p {
     margin-bottom: 0px;
+    text-align: justify;
 }
 
 .single-definition {
@@ -137,6 +162,7 @@ button.submit:hover {
     margin-bottom: 1em;
     background-color: whitesmoke;
     border-radius: 1em;
+    border-top: 3px solid lightblue;
 }
 
 @media screen and (max-width: 700px) {
@@ -150,5 +176,16 @@ button.submit:hover {
 
     button.submit {
         width: 100%;
+    }
+
+    .question h2 {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: rgb(230, 230, 230);
+        text-align: center;
+        padding: .5em 0.25em;
+        margin-bottom: 0px;
+        font-size: 1.5rem;
     }
 }
